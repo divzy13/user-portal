@@ -11,12 +11,12 @@ export default function Home() {
                     <h1> Welcome to the portal </h1>
                     <p> Register new product payment via Cyrpto Wallet at a reasonalble price </p>
                     <Link to="/product">
-                        <button>Home Page</button>
+                        <button>Go To Products</button>
                     </Link>
                 </div>
             </div>
             <div className="pic"></div>
         </div>
 
-    )
+    );
 }

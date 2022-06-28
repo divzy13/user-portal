@@ -1,27 +1,36 @@
-import logo from './logo.svg';
-import { Route, Routes, Link } from "react-router-dom";
+//import { Route, Routes } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter } from "react-router-dom";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import Home from './pages/Home/home';
-import Product from './pages/Product/product';
 import Navbar from './component/Navbar/Navbar';
-// const Home = lazy(() => import("./pages/Home/home"));
-//const Product = lazy(() => import("./pages/Product/product"));
+import Spinner from './component/Spinner/Spinner';
+
+const Cart = lazy(() => import("./pages/Cart/CartItems"));
+const Home = lazy(() => import("./pages/Home/home"));
+const ErrorPage = lazy(() => import("./pages/Error/Error"));
+const Product = lazy(() => import("./pages/Product/product"));
+const SingleProduct = lazy(() =>
+  import("./pages/SingleProduct/SingleProduct")
+);
 
 function App() {
   return (
-    <BrowserRouter>
-    <Navbar></Navbar>
-    <div>
-      <hr />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-      </Routes>
-    </div>
-    </BrowserRouter>
+    <Router>
+      <Navbar />
+      <Suspense fallback={<Spinner />}>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/cart" component={Cart}></Route>
+          <Route exact path="/product" component={Product}></Route>
+          <Route
+            exact
+            path="/products/:id"
+            children={<SingleProduct />}
+          ></Route>
+          <Route exact path="*" component={ErrorPage}></Route>
+        </Switch>
+      </Suspense>
+    </Router>
   );
 }
 
