@@ -5,22 +5,25 @@ import {
   selectCartTotal,
   selectCartItems,
 } from "../../redux/cart/cart-selectors";
-//import "./Checkout.scss";
+import "./Checkout.scss";
 
 import styled from "styled-components";
 import AlgoModal from "../Algo-Payment-Modal/AlgoModal";
 import Modal from "../Payment-Modal/Modal";
+import StripePay from "../../component/Checkout/StripeCheckout";
+
 
 const Button = styled.button`
-  min-width: 100px;
+  min-width: 300px;
   padding: 16px 32px;
   border-radius: 4px;
   border: none;
   background: var(--form-press);
   color: var(--coin);
   border : solid 1px lightblue;
-  text-transform: uppercase;
+  text-transform: none;
   cursor: pointer;
+  font-weight: bold;
 
   @media screen and (min-width: 995px) and (max-width: 1200px){
     padding: 5px;
@@ -49,7 +52,7 @@ const openAlgoModal = () => {
   return (
     <div className="checkout-page">
       <div className="payment">
-
+      <StripePay price={total} />
         <Button onClick={openAlgoModal}> Pay with Algo</Button>
         <AlgoModal
           showAlgoModal={showAlgoModal}

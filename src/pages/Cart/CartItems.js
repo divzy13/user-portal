@@ -53,8 +53,8 @@ const CartItems = () => {
               Order Total : <span>${total}</span>
             </h3>
           </article>
-          <StripePay price={total} />
-
+          
+          <Checkout total={total} />
         </div>
       </div>
     </>

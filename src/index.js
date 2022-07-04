@@ -7,6 +7,10 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import { CartProvider } from "./context/cart_context";
 import { UserProvider } from "./context/user_context";
 import { ProductsProvider } from "./context/products_context";
+import {Provider} from 'react-redux';
+import {store,persistor} from './redux/store';
+
+import  {PersistGate} from 'redux-persist/integration/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +20,7 @@ root.render(
     redirectUri={window.location.origin}
     cacheLocation="localstorage"
   >
+  <Provider store={store}>
     <UserProvider>
     <CartProvider>
       <ProductsProvider>
@@ -23,6 +28,7 @@ root.render(
       </ProductsProvider>
     </CartProvider>
     </UserProvider>
+   </Provider>
   </Auth0Provider>,
 );
 

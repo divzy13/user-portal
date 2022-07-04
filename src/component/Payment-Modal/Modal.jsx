@@ -6,7 +6,7 @@ import MyAlgoConnect from "@randlabs/myalgo-connect";
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "algorand-walletconnect-qrcode-modal";
 import { MdClose } from "react-icons/md";
-//import "./Modal.scss";
+import "./Modal.scss";
 import { selectDarkMode } from "../../redux/toggleTheme/toggle-selectors";
 import { createStructuredSelector } from "reselect";
 import Payment from "../Payment/Payment";

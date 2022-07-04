@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { useSelector, useDispatch } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectDarkMode } from "../../redux/toggleTheme/toggle-selectors";
-//import "./Modal.scss";
+import "./Modal.scss";
 
 const AlertModal = ({ darkTheme }) => {
   const dispatch = useDispatch();
