@@ -13,14 +13,15 @@ const StripePay = React.memo(function StripePay({ price }) {
   return (
     <StripeCheckout
       label="Pay Now"
-      name="Trends Clothing"
+      name="Portal"
       billingAddress
       shippingAddress
-      image="https://svgshare.com/i/CUz.svg"
+      image="https://svgshare.com/i/iem.svg"
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
       token={onToken}
+      bitcoin={true}
       stripeKey={publishableKey}
     />
   );

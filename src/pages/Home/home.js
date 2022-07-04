@@ -8,7 +8,7 @@ export default function Home() {
         <div className="info">
             <div className="content">
                 <div className="head">
-                    <h1> Welcome to the portal </h1>
+                    <h1> Welcome to shopping portal </h1>
                     <p> Register new product payment via Cyrpto Wallet at a reasonalble price </p>
                     <Link to="/product">
                         <button>Go To Products</button>

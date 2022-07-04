@@ -8,7 +8,6 @@ const Product = () => {
     const { products } = useProductsContext();
     return (
         <>
-            <h1> Welcome to the product Page</h1>
             <div className="cocktails-center">
                 {products.map((product) => {
                     const { id, image, name, price } = product;

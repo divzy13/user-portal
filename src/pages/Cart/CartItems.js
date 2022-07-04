@@ -3,6 +3,7 @@ import { useGlobalContext } from "../../context/cart_context";
 import { Link } from "react-router-dom";
 import CartItem from "../../component/AddToCart/CartItem";
 import StripePay from "../../component/Checkout/StripeCheckout";
+import Checkout from "../../component/Checkout/Checkout";
 import "../../App.css";
 
 const CartItems = () => {
@@ -53,6 +54,7 @@ const CartItems = () => {
             </h3>
           </article>
           <StripePay price={total} />
+
         </div>
       </div>
     </>

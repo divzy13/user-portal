@@ -24,7 +24,7 @@ const SingleProduct = () => {
               <span className="fa fa-star review"></span>
               <span className="fa fa-star review"></span>
               <span className="fa fa-star-half-o review"></span>
-              <p>60 Reviews</p>
+              <p>5 Reviews</p>
               <h5 className="price-prod">${price}</h5>
               <p className="description"> {description}</p>
               <p className="info-prod">

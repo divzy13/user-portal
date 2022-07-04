@@ -76,19 +76,6 @@ const data = [
         series: 'Wall Art',
         image: 'https://i.etsystatic.com/15485582/r/il/938622/2827560015/il_794xN.2827560015_hdiv.jpg',
         name: 'Wall Art Neutral Black'
-    },
-    {
-        id: '7',
-        group: 'Abstract',
-        description: '2-seater sofa, Whistle gray',
-        Width :  218,
-        Height :  88,
-        price : 1234,
-        stock: 16,
-        amount: 1,
-        series: 'Wall Art',
-        image: 'https://i.etsystatic.com/25401238/r/il/035de5/3476536111/il_794xN.3476536111_gmsa.jpg',
-        name: 'Art Print Modern'
     }
 
 ]
